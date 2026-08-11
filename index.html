@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Le Carnet Gourmand — Avis des lecteurs</title>
+  <link rel="stylesheet" href="./assets/style.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="site-header__inner">
+      <span class="site-header__logo">🍲</span>
+      <div>
+        <p class="site-header__title">Le Carnet Gourmand</p>
+        <p class="site-header__subtitle">Avis des lecteurs</p>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+
+    <section class="card recette">
+      <h1 class="recette__titre">Pâtes crémeuses au citron</h1>
+      <p class="recette__intro">Laissez votre avis sur cette recette grâce au formulaire ci-contre.</p>
+
+      <div class="recette__zone">
+        <h2>Ingrédients</h2>
+        <ul>
+          <li>Pâtes</li>
+          <li>Crème</li>
+          <li>Citron</li>
+          <li>Parmesan</li>
+        </ul>
+
+        <h2>Préparation</h2>
+        <ol>
+          <li>Cuire les pâtes.</li>
+          <li>Mélanger la crème et le citron.</li>
+          <li>Ajouter le parmesan.</li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="card commentaires">
+      <h2 class="commentaires__titre">Laisser un commentaire</h2>
+
+      <form id="form-commentaire" novalidate>
+        <div class="champ">
+          <label for="nom">Votre nom</label>
+          <input type="text" id="nom" name="nom" placeholder="Ex : Léa">
+          <p class="champ__aide">Minimum 2 caractères</p>
+        </div>
+
+        <div class="champ">
+          <label for="commentaire">Votre commentaire</label>
+          <textarea id="commentaire" name="commentaire" rows="4" placeholder="Votre avis sur la recette..."></textarea>
+          <p class="champ__aide">Minimum 10 caractères</p>
+        </div>
+
+        <button type="submit" class="btn-publier">Publier</button>
+
+        <p id="message-erreur" class="message-erreur" hidden></p>
+      </form>
+
+      <h2 class="commentaires__titre">Commentaires</h2>
+      <ul id="liste-commentaires" class="liste-commentaires">
+        <!-- Les commentaires générés dynamiquement par JavaScript viennent ici -->
+      </ul>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <p>Devoir JavaScript — Frontend</p>
+  </footer>
+
+  <script src="./assets/script.js"></script>
+</body>
+</html>

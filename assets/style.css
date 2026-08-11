@@ -1,0 +1,222 @@
+/* ==========================================================================
+   Le Carnet Gourmand — style.css
+   ========================================================================== */
+
+:root {
+  --couleur-fond: #f6f7fb;
+  --couleur-texte-principal: #111827;
+  --couleur-texte-secondaire: #6b7280;
+  --couleur-fond-cartes: #ffffff;
+  --couleur-fond-recette: #fafafa;
+  --couleur-bordures: #e5e7eb;
+  --couleur-bouton-publier: #2563eb;
+  --couleur-danger: #dc2626;
+  --couleur-fond-erreur: #fee2e2;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+  font-size: 15px;
+  background-color: var(--couleur-fond);
+  color: var(--couleur-texte-principal);
+}
+
+/* ---------- En-tête ---------- */
+
+.site-header {
+  background-color: var(--couleur-fond-cartes);
+  border-bottom: 1px solid var(--couleur-bordures);
+}
+
+.site-header__inner {
+  max-width: 1050px;
+  margin: 0 auto;
+  padding: 16px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.site-header__logo {
+  font-size: 28px;
+  line-height: 1;
+}
+
+.site-header__title {
+  margin: 0;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.site-header__subtitle {
+  margin: 0;
+  font-size: 13px;
+  color: var(--couleur-texte-secondaire);
+}
+
+/* ---------- Conteneur principal ---------- */
+
+.container {
+  max-width: 1050px;
+  margin: 0 auto;
+  padding: 16px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  align-items: start;
+}
+
+/* ---------- Cartes ---------- */
+
+.card {
+  background-color: var(--couleur-fond-cartes);
+  border: 1px solid var(--couleur-bordures);
+  border-radius: 16px;
+  padding: 16px;
+}
+
+/* ---------- Bloc recette ---------- */
+
+.recette__titre {
+  font-weight: bold;
+  font-size: 20px;
+  margin-top: 0;
+}
+
+.recette__intro {
+  color: var(--couleur-texte-secondaire);
+  margin-top: 0;
+}
+
+.recette__zone {
+  background-color: var(--couleur-fond-recette);
+  border: 1px solid var(--couleur-bordures);
+  border-radius: 12px;
+  padding: 14px;
+}
+
+.recette__zone h2 {
+  font-size: 15px;
+  margin-top: 0;
+}
+
+/* ---------- Bloc commentaires ---------- */
+
+.commentaires__titre {
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.champ {
+  margin-bottom: 14px;
+}
+
+.champ label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 6px;
+}
+
+.champ input,
+.champ textarea {
+  width: 100%;
+  padding: 10px 12px;
+  border-radius: 12px;
+  border: 1px solid var(--couleur-bordures);
+  font-family: inherit;
+  font-size: 14px;
+  resize: vertical;
+}
+
+.champ__aide {
+  margin: 6px 0 0;
+  font-size: 13px;
+  color: var(--couleur-texte-secondaire);
+}
+
+.btn-publier {
+  width: 100%;
+  padding: 10px 14px;
+  border-radius: 12px;
+  border: none;
+  background-color: var(--couleur-bouton-publier);
+  color: #ffffff;
+  font-weight: bold;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.btn-publier:hover {
+  opacity: 0.9;
+}
+
+.message-erreur {
+  margin-top: 12px;
+  padding: 10px 12px;
+  border-radius: 12px;
+  background-color: var(--couleur-fond-erreur);
+  color: var(--couleur-danger);
+  font-size: 14px;
+}
+
+/* ---------- Liste des commentaires ---------- */
+
+.liste-commentaires {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.commentaire {
+  padding: 14px;
+  border-radius: 12px;
+  border: 1px solid var(--couleur-bordures);
+}
+
+.commentaire__auteur {
+  font-weight: bold;
+  margin: 0 0 4px;
+}
+
+.commentaire__texte {
+  margin: 0 0 10px;
+}
+
+.btn-supprimer {
+  padding: 6px 10px;
+  border-radius: 10px;
+  border: 1px solid var(--couleur-bordures);
+  background-color: var(--couleur-fond-cartes);
+  color: var(--couleur-danger);
+  font-size: 13px;
+  cursor: pointer;
+}
+
+.btn-supprimer:hover {
+  background-color: var(--couleur-fond-erreur);
+}
+
+/* ---------- Pied de page ---------- */
+
+.site-footer {
+  text-align: center;
+  padding: 16px;
+  color: var(--couleur-texte-secondaire);
+  font-size: 13px;
+}
+
+/* ---------- Responsive ---------- */
+
+@media (max-width: 900px) {
+  .container {
+    grid-template-columns: 1fr;
+  }
+}
